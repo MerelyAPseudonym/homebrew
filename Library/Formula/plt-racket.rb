@@ -21,7 +21,9 @@ class PltRacket < Formula
 
       system "./configure", *args
       system "make"
-      ohai "Installing may take a long time (~40 minutes)" unless ARGV.verbose?
+      ohai "Installing may take a long time (~60 minutes)" unless ARGV.verbose?
+      
+      ENV['PLT_SETUP_OPTIONS'] = '--workers 1' # similar to `ENV.deparallelize`, but acts on the `raco setup` command.
       system "make install"
     end
   end
