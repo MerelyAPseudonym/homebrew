@@ -19,6 +19,7 @@ class PltRacket < Formula
                  
       args += '--disable-mac64' unless MacOS.prefer_64_bit?
 
+      ENV.deparallelize
       system "./configure", *args
       system "make"
       ohai "Installing may take a long time (~60 minutes)" unless ARGV.verbose?
