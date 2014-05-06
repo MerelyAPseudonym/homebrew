@@ -5,6 +5,9 @@ class Ghc < Formula
   url "https://www.haskell.org/ghc/dist/7.8.2/ghc-7.8.2-src.tar.xz"
   sha1 "fe86ae790b7e8e5b4c78db7a914ee375bc6d9fc3"
 
+  bottle do
+  end
+
   option "32-bit"
   option "tests", "Verify the build using the testsuite."
 
