@@ -87,9 +87,9 @@ class Ghc < Formula
             system "make", "CLEANUP=1", "THREADS=#{ENV.make_jobs}", "fast"
           end
         end
+        system "make"
       end
 
-      system "make"
       system "make", "--jobs=1", "install"
     end
   end
