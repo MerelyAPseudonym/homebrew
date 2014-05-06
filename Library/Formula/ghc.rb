@@ -60,8 +60,7 @@ class Ghc < Formula
 
       args = ["--prefix=#{subprefix}"]
       system "./configure", *args
-      ENV.deparallelize
-      system "make", "install"
+      system "make", "--jobs=1", "install"
       ENV.prepend_path "PATH", subprefix/"bin"
     end
 
@@ -91,8 +90,7 @@ class Ghc < Formula
       end
 
       system "make"
-      ENV.deparallelize
-      system "make", "install"
+      system "make", "--jobs=1", "install"
     end
   end
 
