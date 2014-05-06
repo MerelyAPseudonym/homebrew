@@ -65,7 +65,7 @@ class Ghc < Formula
     end
 
     cd "Ghcsource" do
-      # ENV.m32 if arch = "i386" # Need to force this to fix build error on internal libgmp_ar.
+      # ENV.m32 if arch == "i386" # Need to force this to fix build error on internal libgmp_ar.
       # (commented out to see if the 32-bit builds still fail)
 
       args = ["--prefix=#{prefix}",
