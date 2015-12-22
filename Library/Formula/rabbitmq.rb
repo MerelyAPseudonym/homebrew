@@ -4,8 +4,6 @@ class Rabbitmq < Formula
   url "https://www.rabbitmq.com/releases/rabbitmq-server/v3.6.0/rabbitmq-server-generic-unix-3.6.0.tar.xz"
   sha256 "f8b8e8cac8874d947c364350e215723309caf158b69ea265bac61a0f5e8d101b"
 
-  bottle :unneeded
-
   depends_on "erlang"
   depends_on "simplejson" => :python if MacOS.version <= :leopard
 
